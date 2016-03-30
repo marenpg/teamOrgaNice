@@ -16,6 +16,7 @@ void setup() {
 }
 
 void loop() {
+	// Checks if the sensor (read button) is activated
 	if(digitalRead(fakeSensePort) == 1){
 		lcd.print("Hello! Remeber:");
 		tone(10, 345, 100);
@@ -23,11 +24,12 @@ void loop() {
 		tone(10, 345, 100);
 		timeSinceMovementSensored = millis();
 		Serial.print(timeSinceMovementSensored);
+		// In 6000 milliseconds run the print remebers-method
 		while(millis() - timeSinceMovementSensored < 12000){
 			printSepLines();
 		}
 		lcd.clear();
-		
+
 	}
 	
 }
