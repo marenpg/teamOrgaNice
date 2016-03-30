@@ -27,6 +27,7 @@ void loop() {
 			printSepLines();
 		}
 		lcd.clear();
+		
 	}
 	
 }
